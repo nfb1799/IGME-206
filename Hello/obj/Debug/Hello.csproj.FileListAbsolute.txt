@@ -1,0 +1,7 @@
+Z:\IGMProfile\Desktop\SAVE HERE\Hello\Hello\bin\Debug\Hello.exe.config
+Z:\IGMProfile\Desktop\SAVE HERE\Hello\Hello\bin\Debug\Hello.exe
+Z:\IGMProfile\Desktop\SAVE HERE\Hello\Hello\bin\Debug\Hello.pdb
+Z:\IGMProfile\Desktop\SAVE HERE\Hello\Hello\obj\Debug\Hello.csprojAssemblyReference.cache
+Z:\IGMProfile\Desktop\SAVE HERE\Hello\Hello\obj\Debug\Hello.csproj.CoreCompileInputs.cache
+Z:\IGMProfile\Desktop\SAVE HERE\Hello\Hello\obj\Debug\Hello.exe
+Z:\IGMProfile\Desktop\SAVE HERE\Hello\Hello\obj\Debug\Hello.pdb
