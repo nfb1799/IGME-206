@@ -150,7 +150,7 @@ namespace TextAdventure
                     break;
                 case 2:
                     rooms[5] = new Kitchen("You open the fridge.\r\nThere is a delicious-looking chocolate cake.\r\n" +
-                                            "You eat the cake and begin to feel dizzy. You fall to the floor." +
+                                            "You eat the cake and begin to feel dizzy. You fall to the floor.\r\n" +
                                             "The cake was poisoned.", "none");
                     break;
                 case 3:
