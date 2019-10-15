@@ -4,7 +4,21 @@ using System.Text;
 
 namespace TextAdventure
 {
-    class Room
+    abstract class Room
     {
+        protected string description;
+        protected string connectedRooms;
+
+        public virtual string Description
+        {
+            get { return description; }
+            set { description = value; }
+        }
+
+        public virtual string ConnectedRooms
+        {
+            get { return connectedRooms; }
+            set { connectedRooms = value; }
+        }
     }
 }

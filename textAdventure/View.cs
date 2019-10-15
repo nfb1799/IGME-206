@@ -22,25 +22,23 @@ namespace TextAdventure
         }
 
         //Displays the description of a room
-        public void Look(Rooms rooms, int index)
+        public void Look(Room room)
         {
-            string[] descriptions = rooms.Descriptions;
             Console.WriteLine("\r\nYou enter the room.");
-            Console.WriteLine(descriptions[index]);
+            Console.WriteLine(room.Description);
         }
 
         //Displays a menu of connected room and their directions
-        public void Actions(Rooms rooms, int index)
+        public void Actions(Room room)
         {
-            string[] connections = rooms.ConnectedRooms;
-            Console.WriteLine("\r\n" + connections[index]);
+            Console.WriteLine("\r\n" + room.ConnectedRooms);
             Console.WriteLine("\r\nEnter a direction to travel or X to quit (n/e/s/w)");
         }
 
         //Displays a discription of the final room
-        public void LastLook(string end)
+        public void LastLook(Room room)
         {
-            Console.WriteLine(end);
+            Console.WriteLine(room.Description);
         }
     }
 }
