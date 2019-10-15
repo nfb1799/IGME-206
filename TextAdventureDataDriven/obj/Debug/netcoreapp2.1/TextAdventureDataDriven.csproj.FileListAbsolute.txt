@@ -1,0 +1,11 @@
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\bin\Debug\netcoreapp2.1\TextAdventureDataDriven.deps.json
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\bin\Debug\netcoreapp2.1\TextAdventureDataDriven.runtimeconfig.json
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\bin\Debug\netcoreapp2.1\TextAdventureDataDriven.runtimeconfig.dev.json
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\bin\Debug\netcoreapp2.1\TextAdventureDataDriven.dll
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\bin\Debug\netcoreapp2.1\TextAdventureDataDriven.pdb
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\obj\Debug\netcoreapp2.1\TextAdventureDataDriven.csprojAssemblyReference.cache
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\obj\Debug\netcoreapp2.1\TextAdventureDataDriven.csproj.CoreCompileInputs.cache
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\obj\Debug\netcoreapp2.1\TextAdventureDataDriven.AssemblyInfoInputs.cache
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\obj\Debug\netcoreapp2.1\TextAdventureDataDriven.AssemblyInfo.cs
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\obj\Debug\netcoreapp2.1\TextAdventureDataDriven.dll
+C:\Users\Nik\Desktop\igme206\igme206\TextAdventureDataDriven\obj\Debug\netcoreapp2.1\TextAdventureDataDriven.pdb

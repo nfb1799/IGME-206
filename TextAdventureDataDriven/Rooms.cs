@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace TextAdventure
+namespace TextAdventureDataDriven
 {
     class Rooms
     {
@@ -21,7 +21,7 @@ namespace TextAdventure
             descriptions = new string[numberOfRooms];
             connectedRooms = new string[numberOfRooms];
 
-            for(int i = 0; i < numberOfRooms; i++)
+            for (int i = 0; i < numberOfRooms; i++)
             {
                 roomNames[i] = file.ReadLine();
                 descriptions[i] = file.ReadLine();
