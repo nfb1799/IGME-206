@@ -9,6 +9,10 @@ namespace TextAdventure
         {
             return uniqueInstance;
         }
+        /*static void Main(string[] args)
+        {
+            Rooms rooms = new Rooms("../../../RoomsText.txt");
+        }*/
         static void Main(string[] args)
         {
             GameLogic game = new GameLogic();
@@ -23,13 +27,13 @@ namespace TextAdventure
 
             while (playing)
             {
-                viewer.Look(game.CurrentRoom); //Diplays the description of the current room
-                viewer.Actions(game.CurrentRoom); //Displays a menu of connected rooms and their directions
+                viewer.Look(game.Rooms, game.CurrentIndex); //Diplays the description of the current room
+                viewer.Actions(game.Rooms, game.CurrentIndex); //Displays a menu of connected rooms and their directions
                 game.Move(controller.MoveInput()); //Allows the user to move to a new room or quit the game
                 if (game.CurrentIndex == 5)
                 {
                     playing = false;
-                    viewer.LastLook(game.CurrentRoom); //Displays a room description based on the final room
+                    viewer.LastLook(game.EndDescription); //Displays a room description based on the final room
                 }
             }
 

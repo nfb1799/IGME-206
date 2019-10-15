@@ -6,8 +6,8 @@ namespace TextAdventure
 {
     class GameLogic
     {
-        protected Room[] rooms;
-        protected Room currentRoom;
+        protected Rooms rooms; //creates an instance of the Rooms class called rooms
+        protected string endDescription;
         protected int currentIndex;
 
         private static GameLogic uniqueInstance = new GameLogic();
@@ -19,38 +19,36 @@ namespace TextAdventure
         //Initializes the rooms as well as the currentRoom and currentIndex
         public GameLogic()
         {
-            rooms = new Room[6];
-            rooms[0] = new Hallway("A long, dark corridor with Renaissance portraits lining the walls.\r\n" +
-                                    "Spiderwebs are everywhere. The temperature dropped when you entered the room.",
-                                    "n: Staircase\r\ne: Kitchen\r\nw: Bathroom");
-            rooms[1] = new Bathroom("A musty, smelly bathroom. There is a shower with water dripping.\r\n" +
-                                    "The water in the toilet is a moldy green. Your nose twitches in disgust.",
-                                    "e: Hallway");
-            rooms[2] = new Kitchen("An eloquent kitchen with all the essentials. It smells like chocolate chip cookies.\r\n" +
-                                    "There is a bouquet of fresh fruit on the counter. The fridge appears to be running.",
-                                    "w: Hallway");
-            rooms[3] = new Bedroom("A bedroom complete with a nightstand, lamp, and bed. The bed is unmade.\r\n" +
-                                    "The lamp is flickering as the only light in the room.",
-                                    "s: Staircase");
-            rooms[4] = new Staircase("A tall, winding staircase. The railing is a cold, dark metal.\r\n" +
-                                    "The floorboards screech with every step.",
-                                    "n: Bedroom\r\ns: Hallway");
-            currentRoom = rooms[0];
-            currentIndex = 0;
+            try
+            {
+                rooms = new Rooms("../../../RoomsText.txt");
+                endDescription = "";
+                currentIndex = 0;
+
+            } 
+            catch (Exception e)
+            {
+                Console.WriteLine("The file could not be read.");
+                Console.WriteLine(e.Message);
+            }
         }
 
-        //get and set for currentRoom
-        public Room CurrentRoom
+        public Rooms Rooms
         {
-            get { return currentRoom; }
-            set { currentRoom = value; }
+            get { return rooms; }
+            set { rooms = value; }
         }
 
-        //get and set for currentIndex
         public int CurrentIndex
         {
             get { return currentIndex; }
-            set { currentIndex = value;  }
+            set { currentIndex = value; }
+        }
+
+        public string EndDescription
+        {
+            get { return endDescription; }
+            set { endDescription = value; }
         }
 
         //Determines which direction the user chose to move
@@ -81,11 +79,9 @@ namespace TextAdventure
         {
             if (currentIndex == 0) //From Hallway to Staircase
             {
-                currentRoom = rooms[4];
                 currentIndex = 4;
             } else if(currentIndex == 4) //From Staircase to Bedroom
             {
-                currentRoom = rooms[3];
                 currentIndex = 3;
             }
         }
@@ -95,12 +91,10 @@ namespace TextAdventure
         {
             if (currentIndex == 0) //From Hallway to Kitchen
             {
-                currentRoom = rooms[2];
                 currentIndex = 2;
             }
             else if (currentIndex == 1) //From Bathroom to Hallway
             {
-                currentRoom = rooms[0];
                 currentIndex = 0;
             }
         }
@@ -110,11 +104,9 @@ namespace TextAdventure
         {
             if(currentIndex == 3) //From Bedroom to Staircase
             {
-                currentRoom = rooms[4];
                 currentIndex = 4;
             } else if(currentIndex == 4) //From Staircase to Hallway
             {
-                currentRoom = rooms[0];
                 currentIndex = 0;
             }
         }
@@ -124,11 +116,9 @@ namespace TextAdventure
         {
             if(currentIndex == 0) //From Hallway to Bathroom
             {
-                currentRoom = rooms[1];
                 currentIndex = 1;
             } else if(currentIndex == 2) //From Kitchen to Hallway
             {
-                currentRoom = rooms[0];
                 currentIndex = 0;
             }
         }
@@ -139,32 +129,31 @@ namespace TextAdventure
             switch(currentIndex)
             {
                 case 0:
-                    rooms[5] = new Hallway("You examine a painting on the wall and it begins moving.\r\n" +
+                    endDescription = new string("You examine a painting on the wall and it begins moving.\r\n" +
                                         "The man in the painting materializes and escorts you out the door\r\n" +
-                                        "you arrived in.", "none");
+                                        "you arrived in.");
                     break;
                 case 1:
-                    rooms[5] = new Bathroom("You examine the leaky showerhead and the door slams behind you.\r\n" +
+                    endDescription = new string("You examine the leaky showerhead and the door slams behind you.\r\n" +
                                             "A ghost violently pushes you into the tub and you are knocked unconscious.\r\n" +
-                                            "Unfortunate.", "none");
+                                            "Unfortunate.");
                     break;
                 case 2:
-                    rooms[5] = new Kitchen("You open the fridge.\r\nThere is a delicious-looking chocolate cake.\r\n" +
+                    endDescription = new string("You open the fridge.\r\nThere is a delicious-looking chocolate cake.\r\n" +
                                             "You eat the cake and begin to feel dizzy. You fall to the floor.\r\n" +
-                                            "The cake was poisoned.", "none");
+                                            "The cake was poisoned.");
                     break;
                 case 3:
-                    rooms[5] = new Bedroom("You jump into the bed and are grabbed by the ankle.\r\n" +
+                    endDescription = new string("You jump into the bed and are grabbed by the ankle.\r\n" +
                                             "A boogie monster drags you under the bed and you are never seen from again.\r\n" +
-                                            "Unfortunate.", "none");
+                                            "Unfortunate.");
                     break;
                 case 4:
-                    rooms[5] = new Staircase("You try leaving the staircase the way you came.\r\n" +
+                    endDescription = new string("You try leaving the staircase the way you came.\r\n" +
                                             "No matter how many steps you take, they just keep coming." +
-                                            "The staircase has become infinite.", "none");
+                                            "The staircase has become infinite.");
                     break;
             }
-            currentRoom = rooms[5];
             currentIndex = 5;
         }
     }

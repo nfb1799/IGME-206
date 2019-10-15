@@ -1,0 +1,16 @@
+﻿5
+Hallway
+A long, dark corridor with Renaissance portraits lining the walls. Spiderwebs are everywhere. The temperature dropped when you entered the room.
+n: Staircase e: Kitchen w: Bathroom
+Bathroom
+A musty, smelly bathroom. There is a shower with water dripping. The water in the toilet is a moldy green. Your nose twitches in disgust.
+e: Hallway
+Kitchen
+An eloquent kitchen with all the essentials. It smells like chocolate chip cookies. There is a bouquet of fresh fruit on the counter. The fridge appears to be running.
+w: Hallway
+Bedroom
+A bedroom complete with a nightstand, lamp, and bed. The bed is unmade. The lamp is flickering as the only light in the room.
+s: Staircase
+Staircase
+A tall, winding staircase. The railing is a cold, dark metal. The floorboards screech with every step.
+n: Bedroom s: Hallway
