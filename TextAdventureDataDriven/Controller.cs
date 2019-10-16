@@ -25,7 +25,7 @@ namespace TextAdventureDataDriven
         }
 
         //Reads any movement input
-        //Confined to the specific values of n/e/s/w/X
+        //Confined to the specific values of n/e/s/w/q
         public string MoveInput()
         {
             string input = "";
@@ -36,9 +36,9 @@ namespace TextAdventureDataDriven
                 try
                 {
                     input = Console.ReadLine();
-                    if (!(input.Equals("n") || input.Equals("e") || input.Equals("s") || input.Equals("w") || input.Equals("X")))
+                    if (!(input.Equals("n") || input.Equals("e") || input.Equals("s") || input.Equals("w") || input.Equals("q")))
                     {
-                        throw new Exception("Error: Please enter a valid input (n/e/s/w/X)");
+                        throw new Exception("Error: Please enter a valid input (n/e/s/w/q)");
                     }
                     flag = false;
                 }

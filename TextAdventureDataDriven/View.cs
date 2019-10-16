@@ -34,7 +34,7 @@ namespace TextAdventureDataDriven
         {
             string[] connections = rooms.ConnectedRooms;
             Console.WriteLine("\r\n" + connections[index]);
-            Console.WriteLine("\r\nEnter a direction to travel or X to quit (n/e/s/w)");
+            Console.WriteLine("\r\nEnter a direction to travel or q to quit (n/e/s/w)");
         }
 
         //Displays a discription of the final room

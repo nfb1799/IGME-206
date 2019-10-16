@@ -1,4 +1,4 @@
-﻿5
+﻿7
 Hallway
 A long, dark corridor with Renaissance portraits lining the walls. Spiderwebs are everywhere. The temperature dropped when you entered the room.
 n: Staircase e: Kitchen w: Bathroom
@@ -10,7 +10,13 @@ An eloquent kitchen with all the essentials. It smells like chocolate chip cooki
 w: Hallway
 Bedroom
 A bedroom complete with a nightstand, lamp, and bed. The bed is unmade. The lamp is flickering as the only light in the room.
-s: Staircase
+e: Bathroom s: Staircase w: Study
 Staircase
 A tall, winding staircase. The railing is a cold, dark metal. The floorboards screech with every step.
 n: Bedroom s: Hallway
+Bathroom
+A dank, bug-infested bathroom. Roaches scatter with your every step. 
+w: Bedroom
+Study
+A quaint study with lots of books. Spiderwebs cover the shelves. There is a desk with a lamp and some pencils.
+e: Bedroom

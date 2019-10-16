@@ -12,15 +12,18 @@ namespace TextAdventureDataDriven
         protected string[] connectedRooms;
         protected int numberOfRooms;
 
-        public Rooms(string textFile)
+        public Rooms(string textFile) //Constructor requires the directory of a text file
         {
-            StreamReader file = new StreamReader(textFile);
-            numberOfRooms = file.Read();
+            StreamReader file = new StreamReader(textFile); //Creates a StreamReader to parse the text file
+            numberOfRooms = file.Read(); //Records the number of rooms
             file.ReadLine();
+
+            //Instantiates all the arrays
             roomNames = new string[numberOfRooms];
             descriptions = new string[numberOfRooms];
             connectedRooms = new string[numberOfRooms];
 
+            //Loops through the text file storing the name, descriptions and connected rooms
             for (int i = 0; i < numberOfRooms; i++)
             {
                 roomNames[i] = file.ReadLine();

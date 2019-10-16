@@ -19,6 +19,7 @@ namespace TextAdventureDataDriven
         //Initializes the rooms as well as the currentRoom and currentIndex
         public GameLogic()
         {
+            //Trys to read in text from a file or returns a file not found error. 
             try
             {
                 rooms = new Rooms("../../../RoomsText.txt");
@@ -68,7 +69,7 @@ namespace TextAdventureDataDriven
                 case "w":
                     w();
                     break;
-                case "X":
+                case "q":
                     EndGame();
                     break;
             }
@@ -85,6 +86,7 @@ namespace TextAdventureDataDriven
             {
                 currentIndex = 3;
             }
+            
         }
 
         //Handles all east-moves
@@ -97,6 +99,14 @@ namespace TextAdventureDataDriven
             else if (currentIndex == 1) //From Bathroom to Hallway
             {
                 currentIndex = 0;
+            }
+            else if (currentIndex == 3) //From Bedroom to Bathroom
+            {
+                currentIndex = 5;
+            }
+            else if (currentIndex == 6) //From Study to Bedroom
+            {
+                currentIndex = 3;
             }
         }
 
@@ -124,6 +134,14 @@ namespace TextAdventureDataDriven
             {
                 currentIndex = 0;
             }
+            else if (currentIndex == 3) //From Bedroom to Study
+            {
+                currentIndex = 6;
+            }
+            else if (currentIndex == 5) //From Bathroom to Bedroom
+            {
+                currentIndex = 3;
+            }
         }
 
         //Creates an ending room based on the user's final room 
@@ -132,32 +150,43 @@ namespace TextAdventureDataDriven
             switch (currentIndex)
             {
                 case 0:
-                    endDescription = new string("You examine a painting on the wall and it begins moving.\r\n" +
+                    endDescription = ("You examine a painting on the wall and it begins moving.\r\n" +
                                         "The man in the painting materializes and escorts you out the door\r\n" +
                                         "you arrived in.");
                     break;
                 case 1:
-                    endDescription = new string("You examine the leaky showerhead and the door slams behind you.\r\n" +
+                    endDescription = ("You examine the leaky showerhead and the door slams behind you.\r\n" +
                                             "A ghost violently pushes you into the tub and you are knocked unconscious.\r\n" +
                                             "Unfortunate.");
                     break;
                 case 2:
-                    endDescription = new string("You open the fridge.\r\nThere is a delicious-looking chocolate cake.\r\n" +
+                    endDescription = ("You open the fridge.\r\nThere is a delicious-looking chocolate cake.\r\n" +
                                             "You eat the cake and begin to feel dizzy. You fall to the floor.\r\n" +
                                             "The cake was poisoned.");
                     break;
                 case 3:
-                    endDescription = new string("You jump into the bed and are grabbed by the ankle.\r\n" +
+                    endDescription = ("You jump into the bed and are grabbed by the ankle.\r\n" +
                                             "A boogie monster drags you under the bed and you are never seen from again.\r\n" +
                                             "Unfortunate.");
                     break;
                 case 4:
-                    endDescription = new string("You try leaving the staircase the way you came.\r\n" +
+                    endDescription = ("You try leaving the staircase the way you came.\r\n" +
                                             "No matter how many steps you take, they just keep coming." +
                                             "The staircase has become infinite.");
                     break;
+                case 5:
+                    endDescription = ("You step on a roach and feel a sharp pain.\r\n" +
+                                            "You pull a stinger out of your foot.\r\n" +
+                                            "Your throat closes up.");
+                    break;
+                case 6:
+                    endDescription = ("You take a book off the shelf.\r\n" +
+                                            "\"How to Escape a Haunted Mansion.\"\r\n" +
+                                            "Convenient.");
+                    break;
+
             }
-            currentIndex = 5;
+            currentIndex = 7;
         }
     }
 }
