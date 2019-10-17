@@ -12,9 +12,9 @@ namespace TextAdventureDataDriven
         
         static void Main(string[] args)
         {
-            GameLogic game = new GameLogic();
-            Controller controller = new Controller();
-            View viewer = new View();
+            GameLogic game = GameLogic.getInstance();
+            Controller controller = Controller.getInstance();
+            View viewer = View.getInstance();
             bool playing = false;
 
 
