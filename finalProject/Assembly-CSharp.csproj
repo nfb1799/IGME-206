@@ -55,15 +55,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BulletAuthoring.cs" />
-     <Compile Include="Assets\BulletData.cs" />
-     <Compile Include="Assets\BulletSpawner.cs" />
-     <Compile Include="Assets\BulletSystem.cs" />
-     <Compile Include="Assets\CollisionSystem.cs" />
      <Compile Include="Assets\CubeAuthoring.cs" />
      <Compile Include="Assets\CubeData.cs" />
      <Compile Include="Assets\CubeSpawner.cs" />
      <Compile Include="Assets\CubeSystem.cs" />
+     <Compile Include="Assets\Player2Authoring.cs" />
+     <Compile Include="Assets\Player2Data.cs" />
+     <Compile Include="Assets\Player2System.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

@@ -44,7 +44,7 @@ public class CubeSystem : JobComponentSystem
                 cubeData.moves += 1;
             }
 
-            if(DPressed && (translation.Value.x < 9))
+            if(DPressed && (translation.Value.x < -1))
             {
                 translation.Value.x += 1;
                 cubeData.x = translation.Value.x;
