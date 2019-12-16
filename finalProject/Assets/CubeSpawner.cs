@@ -14,7 +14,6 @@ public class CubeSpawner : MonoBehaviour
 
     void Start()
     {
-        Unity.Mathematics.Random rand = new Unity.Mathematics.Random(42);
 
         // Create entity prefab from the game object hierarchy once
         var prefab = GameObjectConversionUtility.ConvertGameObjectHierarchy(Prefab, World.Active);
@@ -30,7 +29,7 @@ public class CubeSpawner : MonoBehaviour
                 // Place the instantiated entity in a grid with some noise
                 var position = transform.TransformPoint(new float3(x,y,0));
                 entityManager.SetComponentData(instance, new Translation { Value = position });
-                CubeData data = new CubeData { speed = rand.NextInt() % 10 };
+                CubeData data = new CubeData { moves = 0, beenHit = true };
                 entityManager.SetComponentData(instance, data);
             }
         }

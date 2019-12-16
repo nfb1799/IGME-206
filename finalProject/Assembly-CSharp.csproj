@@ -70,6 +70,9 @@
  <Reference Include="Unity.Burst">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Editor">
+ <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Entities.Properties">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
  </Reference>
@@ -115,8 +118,14 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.multiplayer-weaver.Editor">
+ <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Entities.BuildUtils">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+ <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.Hybrid">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
@@ -136,6 +145,12 @@
  <Reference Include="Unity.Transforms.Editor">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
@@ -145,26 +160,11 @@
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Transforms.Hybrid">
- <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Transforms.Hybrid">
+ <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
  <HintPath>C:/Users/Nik/Desktop/igme206/igme206/finalProject/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>

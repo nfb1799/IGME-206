@@ -6,9 +6,9 @@ using UnityEngine;
 [RequiresEntityConversion]
 public class CubeAuthoring : MonoBehaviour, IConvertGameObjectToEntity
 {
-    public float Speed;
     public float X;
     public float Y;
+    public float Moves;
     public bool BeenHit;
 
     //Converts the cube to an entity
@@ -16,9 +16,9 @@ public class CubeAuthoring : MonoBehaviour, IConvertGameObjectToEntity
     {
         CubeData data = new CubeData
         {
-            speed = Speed,
             x = X,
             y = Y,
+            moves = Moves,
             beenHit = BeenHit
         };
 

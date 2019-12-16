@@ -4,20 +4,17 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
+using UnityEngine;
 using static Unity.Mathematics.math;
 
 public class CollisionSystem : JobComponentSystem
 {
-    public static float totalTime = 0;
-
+ 
     [BurstCompile]
-    struct CollisionSystemJob : IJobForEach<Translation, Rotation, CubeData, BulletData>
+    struct CollisionSystemJob : IJobForEachWithEntity<Translation, Rotation, CubeData, BulletData>
     {
-        public float time;
-        
-        
-        
-        public void Execute(ref Translation translation, [ReadOnly] ref Rotation rotation, ref CubeData cubeData, ref BulletData bulletData)
+         
+        public void Execute(ref Translation translation, [ReadOnly] ref Rotation rotation, ref CubeData cubeData, [ReadOnly] ref BulletData bulletData)
         {
             if(math.floor(cubeData.x) == math.floor(bulletData.x))
             {
@@ -31,9 +28,6 @@ public class CollisionSystem : JobComponentSystem
     {
         var job = new CollisionSystemJob();
         
-        totalTime += UnityEngine.Time.deltaTime;
-        job.time = totalTime;
-
         return job.Schedule(this, inputDependencies);
     }
 }
