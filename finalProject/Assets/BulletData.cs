@@ -8,4 +8,7 @@ public struct BulletData : IComponentData
 {
     //Instantiates the necessary data for bullet entities
     public float speed;
+    public float x;
+    public float y;
+    
 }

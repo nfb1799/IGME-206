@@ -8,4 +8,7 @@ public struct CubeData : IComponentData
 {
     //Instantiats the necessary data for cube entities
     public float speed;
+    public float x;
+    public float y;
+    public bool beenHit;
 }

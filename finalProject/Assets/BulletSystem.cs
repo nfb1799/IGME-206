@@ -4,23 +4,30 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
+using UnityEngine;
 using static Unity.Mathematics.math;
 
 public class BulletSystem : JobComponentSystem
 {
     public static float totalTime = 0;
+    
 
     [BurstCompile]
     struct BulletSystemJob : IJobForEach<Translation, Rotation, BulletData>
     {
         public float time;
+        public bool isWPressed;
 
-        public void Execute(ref Translation translation, [ReadOnly] ref Rotation rotation, [ReadOnly] ref BulletData bulletData)
+        public void Execute(ref Translation translation, [ReadOnly] ref Rotation rotation, ref BulletData bulletData)
         {
             //Moves any bullet entities left and right based on their speed
             float x = bulletData.speed * math.sin(PI * time);
-            translation.Value.x = x;
-
+            if (isWPressed)
+            { 
+                translation.Value.x = x;
+                bulletData.x = x;
+                bulletData.y = translation.Value.y;
+            }
 
         }
     }
@@ -31,6 +38,7 @@ public class BulletSystem : JobComponentSystem
 
         totalTime += UnityEngine.Time.deltaTime;
         job.time = totalTime;
+        job.isWPressed = Input.GetKeyDown("w");
 
         return job.Schedule(this, inputDependencies);
     }

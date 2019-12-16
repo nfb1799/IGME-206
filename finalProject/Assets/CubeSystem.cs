@@ -17,11 +17,13 @@ public class CubeSystem : JobComponentSystem
 
 
 
-        public void Execute(ref Translation translation, [ReadOnly] ref Rotation rotation, [ReadOnly] ref CubeData cubeData)
+        public void Execute(ref Translation translation, [ReadOnly] ref Rotation rotation, ref CubeData cubeData)
         {
             //Moves the cube up and down depending on the speed of the cube
             float y = cubeData.speed * math.sin(PI * time);
             translation.Value.y = y;
+            cubeData.y = y;
+            cubeData.x = translation.Value.x;
         }
     }
 
