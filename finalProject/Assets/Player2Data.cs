@@ -6,8 +6,7 @@ using Unity.Mathematics;
 [Serializable]
 public struct Player2Data : IComponentData
 {
-    public float x;
-    public float y;
+    //Instantiates the necessary variables for a Player2 entity
     public float moves;
     public float score;
     

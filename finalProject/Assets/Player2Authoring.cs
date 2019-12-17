@@ -6,8 +6,7 @@ using UnityEngine;
 [RequiresEntityConversion]
 public class Player2Authoring : MonoBehaviour, IConvertGameObjectToEntity
 {
-    public float X;
-    public float Y;
+    //Instantiates the necessary variables for a Player2 entity
     public float Moves;
     public float Score;
     
@@ -17,12 +16,11 @@ public class Player2Authoring : MonoBehaviour, IConvertGameObjectToEntity
     {
         Player2Data data = new Player2Data
         {
-            x = X,
-            y = Y,
             moves = Moves,
             score = Score
         };
 
+        //Adds the entity to the entity manager
         dstManager.AddComponentData(entity, data);
     }
 }

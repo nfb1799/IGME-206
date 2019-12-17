@@ -4,24 +4,23 @@ using UnityEngine;
 
 [DisallowMultipleComponent]
 [RequiresEntityConversion]
-public class CubeAuthoring : MonoBehaviour, IConvertGameObjectToEntity
+public class Player1Authoring : MonoBehaviour, IConvertGameObjectToEntity
 {
-    public float X;
-    public float Y;
+    //Creates necessary variables for a Player1 Entity
     public float Moves;
-    public bool BeenHit;
+    public float Score;
 
-    //Converts the cube to an entity
+    //Converts the Player1 to an entity
     public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
     {
-        CubeData data = new CubeData
+        Player1Data data = new Player1Data
         {
-            x = X,
-            y = Y,
             moves = Moves,
-            beenHit = BeenHit
+            score = Score
         };
 
+        //Stores the entity in the entity manager
         dstManager.AddComponentData(entity, data);
     }
 }
+
