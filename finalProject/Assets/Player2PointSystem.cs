@@ -7,7 +7,7 @@ using Unity.Transforms;
 using UnityEngine;
 using static Unity.Mathematics.math;
 
-public class Player2ScoreSystem : JobComponentSystem
+public class Player2PointSystem : JobComponentSystem
 {
     
     [BurstCompile]
